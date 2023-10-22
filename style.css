@@ -1,0 +1,459 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: hsl(0, 0%, 10%);
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: hsl(0, 0%, 15%);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+.title {
+  font-weight: bolder;
+  font-size: 2rem;
+  color:tomato
+}
+
+.header .navbar ul {
+  list-style: none;
+}
+
+.header .navbar ul li {
+  position: relative;
+  float: left;
+}
+
+.header .navbar ul li a::after {
+  content: '';
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  left: 20px;
+  bottom: 15px;
+  transition: 0.5s;
+  background: tomato;
+}
+
+.header .navbar ul li a:hover::after {
+  width: 60%;
+}
+
+.header .navbar ul li a {
+  font-size: 20px;
+  padding: 20px;
+  color: beige;
+  display: block;
+  text-decoration: none;
+}
+
+.header .navbar ul li ul {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: hsl(0, 0%, 15%);
+  display: none;
+}
+
+.header .navbar ul li ul li {
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.header .navbar ul li ul li ul {
+  left: 200px;
+  top: 0;
+}
+
+.header .navbar ul li:focus-within>ul,
+.header .navbar ul li:hover>ul {
+  display: initial;
+}
+
+#menu-bar {
+  display: none;
+}
+
+.header label {
+  font-size: 20px;
+  color: beige;
+  cursor: pointer;
+  display: none;
+}
+
+.home{
+  padding-top: 75px;
+  color: beige;
+}
+
+.home span{
+  color: tomato;
+}
+
+.about, .highlight, .experience, .history, .responsibility, .projects, .contact{
+  /* height: 100vh; */
+  padding-top: 75px;
+  color: beige;
+}
+
+.home{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 3rem;
+}
+
+.about{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-page-title{
+  color: tomato;
+  font-size: 3rem;
+  width:25%;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.about-page-title div{
+  margin-bottom: 20px;
+}
+
+.about-page-title div img{
+  border-radius: 50%;
+  width:60%
+}
+
+.about-page-content{
+  color: beige;
+  font-size: 1.8rem;
+  width:50%
+}
+
+.about-page-content p{
+  color: beige;
+  text-align: justify;
+  font-size: 1.4rem;
+  margin-top: 20px;
+}
+
+.highlight{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: beige;
+  margin-bottom: 100px;
+}
+
+.high-title{
+  color: tomato;
+  font-size: 3rem;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.high-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.mycol{
+  width:45%;
+  padding: 0 40px;
+}
+
+.high-col-heading{
+  font-size:2rem; 
+  width:100%; 
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mycol ul li{
+  font-size: 1.3rem;
+}
+
+.experience, .responsibility, .projects{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.ex-heading{
+  color: tomato;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.ex-content{
+  width: 40%;
+  font-size: 1.3rem;
+}
+
+.ex-content ul li ul{
+  margin-left: 30px;
+}
+
+.history{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.his-heading{
+  color: tomato;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.his-content{
+  width: 60%;
+}
+
+.his-content table{
+  width:100%;
+  font-size: 1.3rem;
+  border-collapse: collapse;
+}
+
+.his-content table tr td{
+  padding: 10px 20px;
+  border: 1px solid hsl(0, 0%, 25%);
+}
+
+.his-content table th{
+  padding: 10px 20px;
+  border: 1px solid hsl(0, 0%, 25%);
+}
+
+.personal{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px 40px;
+}
+
+.per-content{
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+
+.per-detail{
+  color: beige;
+  border: 1px solid hsl(0, 0%, 45%);
+  background-color: hsl(0, 0%, 25%);
+  border-radius: 10px;
+  padding: 10px 15px;
+  width:350px;
+  height: 300px;
+  transition: background 0.5s, transform 0.5s;}
+
+.per-detail:hover{
+  background-color: tomato;
+  transform: translateY(-10px);
+}
+
+.per-detail table{
+  width: 90%;
+}
+
+.detail-heading{
+  font-size: 1.8rem;
+  margin: 10px;
+  text-align: center;
+}
+
+.td{
+  padding: 5px 20px;
+  vertical-align: top;
+}
+
+@media(max-width:1260px) {
+  .per-content{
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin-top: 250px;
+  }
+  .per-detail{
+    margin-bottom: 40px;
+    height: 350px;
+  }
+}
+
+@media(max-width:1280px) {
+  .his-content{
+    width: 65%;
+  }
+}
+
+@media(max-width:1050px) {
+  .header {
+    padding: 20px;
+  }
+
+  .header label {
+    display: initial;
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: hsl(0, 0%, 15%);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    display: none;
+  }
+
+  .header .navbar ul li {
+    width: 100%;
+  }
+
+  .header .navbar ul li ul {
+    position: relative;
+    width: 100%;
+  }
+
+  .header .navbar ul li ul li {
+    background: hsl(0, 0%, 15%);
+    position: relative;
+    width: 100%;
+  }
+
+  .header .navbar ul li ul li ul {
+    width: 100%;
+    left: 0;
+  }
+
+  #menu-bar:checked~.navbar {
+    display: initial;
+  }
+
+  .home{
+    font-size: 2rem;
+  }
+
+  .about{
+    flex-direction: column;
+  }
+
+  .about-page-title{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    
+  }
+
+  .about-page-content{
+    width: 80%;
+    margin: 0;
+  }
+
+  .about-page-title div img{
+    width:25%
+  }
+  
+  .about-page-title div{
+    width:100%
+  }
+
+  .high-content{
+    flex-direction: column;
+  }
+
+  .mycol{
+    width:100%;
+    padding: 0 80px;
+  }
+  
+  .high-title{
+    font-size: 2rem;
+  }
+  
+  .high-col-heading{
+    font-size:1.4rem; 
+  }
+        
+  .mycol ul li{
+    font-size: 1rem;
+  }
+  
+  .ex-heading{
+    font-size: 2rem;
+  }
+  
+  .ex-content{
+    width: 60%;
+    font-size: 1rem;
+  }
+  
+  .his-heading{
+    font-size: 2rem;
+  }
+  
+  .his-content table{
+    font-size: 1rem;
+  }
+  
+  .his-content{
+    width: 70%;
+  }
+
+}
+
+@media(max-width:500px) {
+  .home{
+    font-size: 1.5rem;
+  }
+
+  .his-content{
+    width: 80%;
+  }
+  
+}
+
+@media(max-width:350px) {
+  .home{
+    font-size: 1rem;
+  }
+
+  .his-content{
+    width: 95%;
+  }
+
+}
