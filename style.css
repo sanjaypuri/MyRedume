@@ -302,6 +302,18 @@ body {
   vertical-align: top;
 }
 
+.btn{
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: tomato;
+  color: beige;
+  font-weight: bold;
+}
+
+.btn:hover{
+  background-color: hsl(9, 100%, 54%);
+}
+
 @media(max-width:1260px) {
   .per-content{
     flex-direction: column;
